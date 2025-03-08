@@ -16,7 +16,7 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
                     <div class="p-4">
                         <p class="text-lg font-medium mb-2">{{ $post->texto }}</p>
-                        <img src="{{ $post->urlImagen }}" alt="Imagen no disponible" class="w-full h-48 object-cover mb-4 rounded-md">
+                        <img src="{{ Storage::url($post->urlImagen) }}" alt="Imagen no disponible" class="w-full h-48 object-cover mb-4 rounded-md">
                     </div>
                     <div class="flex justify-between items-center p-4 bg-gray-50">
                         <a href="{{ route('post.edit', $post->id) }}" 
